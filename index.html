@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<h3>Rob Pickerill</h3>
+				<br>
+				<p>Senior Principal Engineer - Disney Streaming</p>
+			</section>
+
+			<section>
+				<h3>Disney Streaming</h3>
+				<p>Disney Streaming is a collective for four major products:</p>
+				<ul>
+					<li>Disney+</li>
+					<li>ESPN+</li>
+					<li>Star+</li>
+					<li>Hulu</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Scale</h3>
+				<ul>
+					<li>180,000,000 subscribers</li>
+					<li>3 continents:</li>
+					<ul>
+						<li>Americas</li>
+						<li>Western Europe</li>
+						<li>Asia Pacific</li>
+					</ul>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Structure</h3>
+				<br>
+				<p>A service team is a team, consists of 2 to 3 engineers, a tech lead and a project manager. This is commonly
+					described as a two pizza team.</p>
+			</section>
+
+			<section>
+				<h3>Responsibilities</h3>
+				<br>
+				<p>A service team is responsible for everything their API/APP needs, this includes:</p>
+				<ul>
+					<li>Feature development</li>
+					<li>Infrastructure</li>
+					<li>Observability</li>
+					<li>Deployments</li>
+					<li>On call/escalations</li>
+					<li>...</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Cloud</h3>
+				<p>Disney Streaming backend API's are hosted on AWS, and Disney are one of their largest customers.</p>
+			</section>
+
+			<section>
+				<h3>Why the cloud?</h3>
+				<p>There are many reasons why a company may choose to run their workloads on the cloud, but for me there are two
+					huge advantages to adopting cloud computing</p>
+				<ul>
+					<li>Rich set of APIs to service infrastructure needs</li>
+					<li>Scalability and Elasticity</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Disney Streaming Global</h3>
+				<p>TODO</p>
+			</section>
+
+			<section>
+				<h3>Disney Streaming Systems</h3>
+				<p>TODO</p>
+			</section>
+
+			<section>
+				<h3>Disney Streaming Talks</h3>
+				<br>
+				<ul>
+					<li><a href="https://www.youtube.com/watch?v=qgxxtmNijlg">How Disney+ deploys globally with Amazon ECS</a>
+					<li><a href="https://www.youtube.com/watch?v=WAOrqsHpJuM">How Disney+ uses fast data ubiquity to improve
+							the
+							customer experience</a></li>
+					<li><a href="https://www.youtube.com/watch?v=TCnmtSY2dFM">How Disney+ scales globally on Amazon
+							DynamoDB</a>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+	<script src=" dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
