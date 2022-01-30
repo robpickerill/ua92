@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>UA92 Cloud Computing</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<h3>Rob Pickerill</h3>
+				<br>
+				<p>Senior Principal Engineer - Disney Streaming</p>
+				<aside class="notes">
+					<ul>
+						<li>Felt facts are easily obtainable through whitepapers, lecture notes, etc</li>
+						<li>Here to share my opinons on the industry and cloud</li>
+						<li>You can form own opinions</li>
+						<li>To decide what you want to do, what you want from the industry</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h3>Disney Streaming</h3>
+				<ul>
+					<li>Disney+</li>
+					<li>ESPN+</li>
+					<li>Star+</li>
+					<li>Hulu</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>Disney Steaming represents four major streaming products</li>
+						<li>All household names, in their respective regions</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h3>Scale</h3>
+				<ul>
+					<li>180,000,000 subscribers</li>
+					<li>3 continents:</li>
+					<ul>
+						<li>Americas</li>
+						<li>Western Europe</li>
+						<li>Asia Pacific</li>
+					</ul>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>180 million subscribers</li>
+						<li>Across 3 continents, Americas, Western Europe, Asia Pacific</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h3>Working in the Industry</h3>
+				<ul>
+					<li>Two pizza teams</li>
+					<li>Agile methodologies</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>Team size: 2 pizza teams</li>
+						<li>Reporting structure</li>
+						<li>Agile approach, methodologies</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h3>Why the cloud?</h3>
+				<p>For me, there are three huge advantages to adopting cloud computing</p>
+				<ul>
+					<li>Rich set of APIs and options to service infrastructure needs</li>
+					<li>Scalability and Elasticity</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>Rich set of APIs: I can request almost anything I want infrastructure wise from API, and then use it a
+							few minutes later
+						</li>
+						<ul>
+							<li>This enables me to do nice things like:</li>
+							<li>Use ephemeral infrastructure in testing, have a CI system spin up all the required infra, deploy the
+								code, then run tests to assert that my applications behaviour is exactly as I want it, then tear it all
+								down again. I can set this up to react to actions in github, like opening a pull request, then the only
+								human interaction here is to write the code, and push it to git.</li>
+							<li>I can spike out any theories I have in the same way, deploy ephemeral infrastructure, or a proof of
+								concept, and then use that hardware to prove or disprove my thinking, write up my notes and capture
+								evidence, then tear it all down again.
+							</li>
+						</ul>
+						<li>Scalability and Elasticity: In addition to the above, having API's and infrastructure scale
+							independently of each other is great for responding to traffic patterns.</li>
+						<ul>
+							<li>Being able to scale out an application to respond to increases is by far the biggest win here for me,
+								by having a programmatic way for to monitor and respond to saturation of resources is incredible. I can
+								write an application, define metrics by which the application should scale on. On a simple level that
+								might be request count per instance, as a rated measurement of capacity per compute instance. From there
+								I can define scaling policies which state that I need to provide more compute instances to my
+								application should the request count exceed its rated threshold. This means we can reliabily serve users
+								traffic, even during high traffic demand periods, like a large scale event. What happens if your
+								companies blog or website makes the front page on a large social website, thats going to drive a lot of
+								traffic down to your website. In the cloud we can define scaling policies to handle this sudden
+								unexpected spike of traffic by adding more instances to the application when those thresholds are
+								breached. Without scaling policies our website is going to crumble under the increased load, as
+								we saturate compute we end up in a situation where no requests are being handled in a timely manner, as
+								we exhaust CPU time through computation and context switching.
+							</li>
+						</ul>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h3>Reference Architecture</h3>
+				<p>
+					https://docs.aws.amazon.com/whitepapers/latest/web-application-hosting-best-practices/an-aws-cloud-architecture-for-web-hosting.html
+				</p>
+			</section>
+
+			<section>
+				<h3>Disney Streaming Cloud Talks</h3>
+				<br>
+				<ul>
+					<li><a href="https://www.youtube.com/watch?v=qgxxtmNijlg">How Disney+ deploys globally with Amazon ECS</a>
+					<li><a href="https://www.youtube.com/watch?v=WAOrqsHpJuM">How Disney+ uses fast data ubiquity to improve the
+							customer experience</a></li>
+					<li><a href="https://www.youtube.com/watch?v=TCnmtSY2dFM">How Disney+ scales globally on Amazon
+							DynamoDB</a>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+	<script src=" dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			slideNumber: "c/t",
+		});
+	</script>
+</body>
+
+</html>
